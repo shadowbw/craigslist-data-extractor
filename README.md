@@ -1,4 +1,4 @@
-### Craigslist-Data-Extractor
+### Craigslist Data Extractor
 
 This is a crawler/scraper program which scans craigslist ads and extracts data from each ad. The crawler is multi-threaded in order to speed up performance. The extracted data is packaged into an xml file which is created in the same directory where the script is run. The xml file is named with "craigslist_{timestamp}" to prevent duplication. 
 
@@ -17,7 +17,15 @@ The phone number is extracted using a Baysian Classifier. The classifier is trai
 
 #### Running the Program
 
-The program can be installed using the maven command "mvn package appassembler:assemble" which will packaged the program into an executable jar file, which can be executed using one of the scripts created in the /target/appassembler/bin directory. Upon starting the program, the terminal prompts the user to select the dates for the scraper to search within. To search only a single day, enter the same starting and ending date. 
+Build the scraper with the Maven command:
+
+    mvn package appassembler:assemble
+
+Run the scraper by executing the script:
+
+    bash target/appassembler/bin/craigslist-extractor
+
+Upon starting the program, the terminal prompts the user to select the dates for the scraper to search within. To search only a single day, enter the same starting and ending date. 
 
 #### Speed of Execution
 
